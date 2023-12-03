@@ -7,6 +7,7 @@ import {
   signInStart,
   signInSuccess,
 } from "../redux/user/userSlice";
+import Oauth from "../components/Oauth";
 
 const SignIn = () => {
 
@@ -106,6 +107,9 @@ const SignIn = () => {
             {loading ? "Loading..." : "Sign In"}
           </span>
         </a>
+      
+      <Oauth todo={"Sign-In"} />
+
       </form>
 
       <div className="flex gap-2 mt-5 ">
