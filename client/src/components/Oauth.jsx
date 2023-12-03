@@ -5,10 +5,8 @@ import { signInSuccess } from "../redux/user/userSlice";
 import { useNavigate } from "react-router-dom";
 
 export default function Oauth({ todo }) {
-
-
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleGoogleClick = async () => {
     try {
@@ -30,7 +28,7 @@ export default function Oauth({ todo }) {
 
       const data = await result.json();
       dispatch(signInSuccess(data));
-        navigate("/");
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
